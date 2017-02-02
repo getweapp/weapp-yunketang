@@ -1,0 +1,33 @@
+<!--pages/mystudy/mystudy.wxml-->
+<scroll-view class="pageContainer"  bindscroll="scrooll" scroll-y="true" >
+    <view  class="logo"  wx:if="{{hidden=='true'}}"></view>
+    <view class="header" wx:if="{{hidden!='true'}}">
+        <image src="../../images/default_head_circle.png" animation="{{userImgAnimation}}"></image>
+        <view class="styState flex" >
+            <view animation="{{styStateAnimation}}">
+                <text>上次学习</text>
+                <text><text id="bg-font">{{day}}</text>天前</text>
+            </view>
+            <view animation="{{styStateAnimation}}"></view>
+            <view animation="{{styStateAnimation}}">
+                <text>本月已学课件</text>
+                <text><text id="bg-font">{{count}}</text>个</text>
+            </view>
+        </view>
+    </view>
+    <view class="body">
+        <view class="flex downTitle">
+            <text>{{downTitle_left}}</text>
+            <text>{{downTitle_right}}</text>
+        </view>
+        <block wx:for="{{studied}}" wx:for-item="item">
+            <navigator url="{{item.url}}" class="course flex">
+                <image src="{{item.imgurl}}"></image>
+                <view class="SdyInfo flex">
+                    <text>{{item.title}}</text>
+                    <text>{{item.state}}</text>
+                </view>
+            </navigator>
+        </block>
+    </view>
+</scroll-view>

@@ -1,0 +1,92 @@
+/* pages/mystudy/mystudy.wxss */
+.pageContainer{
+    height: 1140rpx;
+    position: relative;
+}
+.logo{
+    height: 65rpx;
+    width:750rpx;
+    z-index: 10;
+    position: absolute;
+    top:0;
+    left:0;
+    background: url("../../images/logo_bg.png") left no-repeat;
+    background-size: 219rpx 65rpx;
+}
+
+/*header*/
+.header{
+    position: relative;
+    height: 400rpx;
+    background-color: #2cc17B;
+}
+.header image{
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin:-80rpx 0 0 -80rpx;
+    width:160rpx;
+    height: 160rpx;
+}
+.styState{
+    width:750rpx;
+    position: absolute;
+    bottom:20rpx;
+    justify-content: space-around;
+}
+.styState view{
+    width:320rpx;
+    font-size: 20rpx;
+    color: #FFF;
+}
+.styState text{
+    font-size: 1em;
+    display: block;
+    text-align: center;
+}
+#bg-font{
+    display: inline-block;
+    font-size: 2em;
+}
+.styState view:nth-child(2){
+    width:2rpx;
+    background-color: rgba(255,255,255,0.4);
+}
+/*body */
+.downTitle{
+    width:750rpx;
+    background-color: rgba(200,200,200,0.2);
+    justify-content: space-between;
+}
+.downTitle text{
+    line-height: 40rpx;
+    font-size: 20rpx;
+    color: #CCC;
+    padding:0 20rpx;
+}
+/*course*/
+.course {
+    padding: 15rpx 20rpx;
+    border-bottom: 1rpx #CCC solid;
+}
+
+.course:last-child{
+    border-bottom: none;
+}
+.course image{
+    height: 160rpx;
+    width:300rpx;
+}
+.SdyInfo{
+    text-indent: 0.5em;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.SdyInfo text:first-child{
+    font-size: 24rpx;
+    line-height: 48rpx;
+}
+.SdyInfo text:last-child{
+    font-size:20rpx;
+    color: #2cc17B;
+}
